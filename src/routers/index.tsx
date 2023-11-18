@@ -68,6 +68,11 @@ import { Jobs as StrategyBrain } from 'plus:/datasource/anomaly';
 // @ts-ignore
 import plusLoader from 'plus:/utils/loader';
 import { dynamicPackages, Entry } from '@/utils';
+import AllView from '@/pages/view/allView';
+import CloudView from '@/pages/view/cloudView';
+import ApplicationView from '@/pages/view/applicationView';
+import EngineRoomView from '@/pages/view/engineRoomView';
+import NetworkView from '@/pages/view/newworkView';
 
 const Packages = dynamicPackages();
 let lazyRoutes = Packages.reduce((result: any, module: Entry) => {
@@ -166,6 +171,12 @@ export default function Content() {
         <Route exact path='/help/notification-tpls' component={NotificationTpls} />
         <Route exact path='/help/notification-settings' component={NotificationSettings} />
         <Route exact path='/help/migrate' component={MigrateDashboards} />
+
+        <Route exact path='/view/all' component={AllView} />
+        <Route exact path='/view/cloud' component={CloudView} />
+        <Route exact path='/view/application' component={ApplicationView} />
+        <Route exact path='/view/network' component={NetworkView} />
+        <Route exact path='/view/engine-roon' component={EngineRoomView} />
 
         <Route exact path='/trace/explorer' component={TraceExplorer} />
         <Route exact path='/trace/dependencies' component={TraceDependencies} />

@@ -219,6 +219,34 @@ const getMenuList = (t) => {
         },
       ],
     },
+    {
+      key: 'view',
+      icon: <IconFont type='icon-Menu_SystemInformation' />,
+      activeIcon: <Icon component={menuIcon.SystemInformation as any} />,
+      label: t('总体视图'),
+      children: [
+        {
+          key: '/view/all',
+          label: t('总体视图'),
+        },
+        {
+          key: '/view/cloud',
+          label: t('云管视图'),
+        },
+        {
+          key: '/view/application',
+          label: t('应用视图'),
+        },
+        {
+          key: '/view/network',
+          label: t('网络拓扑'),
+        },
+        {
+          key: '/view/engine-roon',
+          label: t('机房概览'),
+        },
+      ],
+    },
   ];
   if (import.meta.env['VITE_IS_COLLECT']) {
     const targets = _.find(menuList, (item) => item.key === 'targets');
